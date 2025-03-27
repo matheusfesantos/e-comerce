@@ -1,7 +1,14 @@
 import Image from "next/image"
+import Logo from "../../../../../public/images/logo/essence-logo.png"
 import "./styles.css"
 
+
 export default function HeroSection() {
+
+  const phoneNumber = "5519986126226";
+  const message = encodeURIComponent("Ola, gostaria de comprar seu produtos");
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
   return (
     <section className="secao-principal">
       <div className="secao-container">
@@ -13,14 +20,20 @@ export default function HeroSection() {
               individualidade.
             </p>
             <div className="botoes-principal">
-              <button className="botao-primario">Comprar Agora</button>
+              <button className="botao-primario">
+                <a
+                  href="https://wa.me/5519986126226?text=Ola%2C%20gostaria%20de%20comprar%20seu%20produtos"
+                  className="botao-primario"
+                >
+                  Comprar Agora
+                </a></button>
             </div>
           </div>
           <div className="secao-principal-imagem">
             <div className="imagem-destaque-container">
               <Image
-                src="/images/produtos/perfume-destaque.png"
-                alt="Perfume em destaque"
+                src={Logo}
+                alt="Logo"
                 width={300}
                 height={300}
                 className="imagem-destaque"

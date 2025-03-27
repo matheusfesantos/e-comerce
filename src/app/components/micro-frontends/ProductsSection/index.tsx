@@ -5,38 +5,52 @@ export default function ProductsSection() {
   const products = [
     {
       id: 1,
-      name: "Elegância Floral",
-      type: "Eau de Parfum",
-      price: "R$ 449,99",
-      image: "/images/produtos/perfume-floral.png",
+      name: "Show de Banho",
+      type: "Shampoo",
+      price: "R$ 49,99",
+      image: "/images/produtos/show-de-banho.jpeg",
     },
     {
       id: 2,
-      name: "Brisa Cítrica",
-      type: "Eau de Toilette",
-      price: "R$ 399,99",
-      image: "/images/produtos/perfume-citrico.png",
+      name: "Sabonete em Barra",
+      type: "Sabonete",
+      price: "R$ 39,99",
+      image: "/images/produtos/sabonete-em-barra-vegetal.jpeg",
     },
     {
       id: 3,
-      name: "Notas Amadeiradas",
-      type: "Eau de Parfum",
-      price: "R$ 479,99",
-      image: "/images/produtos/perfume-amadeirado.png",
+      name: "Creme de Corpo",
+      type: "Creme",
+      price: "R$ 79,99",
+      image: "/images/produtos/creme-de-copro.jpeg",
     },
     {
       id: 4,
-      name: "Essência Oriental",
-      type: "Parfum",
-      price: "R$ 529,99",
-      image: "/images/produtos/perfume-oriental.png",
+      name: "Nutricão Prebióbica",
+      type: "Creme de",
+      price: "R$ 29,99",
+      image: "/images/produtos/natruicao_prebiobica.jpeg",
+    },
+    {
+      id: 5,
+      name: "Cuide-se Bem",
+      type: "Sabonete",
+      price: "R$ 29,99",
+      image: "/images/produtos/cuide-se-bem.jpeg",
+    },
+    {
+      id: 6,
+      name: "Desodorante",
+      type: "Desodorante",
+      price: "R$ 29,99",
+      image: "/images/produtos/desodorante.jpeg",
     },
   ]
 
   return (
     <section className="secao-produtos">
       <div className="secao-container">
-        <h2 className="titulo-secao">Fragrâncias em Destaque</h2>
+        <h2 className="titulo-secao">Nosso portifólio de vendas</h2>
 
         <div className="grade-produtos">
           {products.map((product) => (
