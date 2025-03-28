@@ -79,16 +79,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-<<<<<<< HEAD
 .imagem-destaque {
   border-radius: 200px;
   object-fit: contain;
-=======
   img{
     border-radius: 50%;
   }
->>>>>>> ee7f014840dac454b8f393615121609f2c1a538f
 }
 
 @media (min-width: 768px) {
