@@ -79,10 +79,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.imagem-destaque {
-  object-fit: contain;
+  img{
+    border-radius: 50%;
+  }
 }
 
 @media (min-width: 768px) {

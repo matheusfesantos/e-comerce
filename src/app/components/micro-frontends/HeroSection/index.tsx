@@ -19,8 +19,8 @@ export default function HeroSection() {
           <div className="secao-principal-imagem">
             <div className="imagem-destaque-container">
               <Image
-                src="/images/produtos/perfume-destaque.png"
-                alt="Perfume em destaque"
+                src="/images/logo/maju-logo.png"
+                alt="Maju Cosméticos"
                 width={300}
                 height={300}
                 className="imagem-destaque"
@@ -32,4 +32,3 @@ export default function HeroSection() {
     </section>
   )
 }
-
