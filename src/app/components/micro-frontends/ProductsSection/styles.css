@@ -84,7 +84,30 @@
 }
 
 .botao-produto:hover {
-  background-color: var(--cor-verde-50);
+  background-color: var(--cor-verde-200);
+}
+
+.produtos-selecionados{
+  margin-top: 20px;
+  text-align: center;
+  background-color: var(--cor-verde-100);
+  font-family: cursive;
+}
+
+.botao-finalizar-compra{
+  margin-top: 60px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--cor-verde-400);
+  transition: ease-in;
+
+  button{
+    font-size: large;
+    color: rgb(255, 255, 255);
+    border-color: transparent;
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 640px) {
@@ -98,4 +121,3 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-

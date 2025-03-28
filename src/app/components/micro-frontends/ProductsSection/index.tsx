@@ -1,7 +1,13 @@
+"use client";
+
 import "./styles.css"
 import ProductCard from "./ProductCard"
+import { useState } from "react";
 
 export default function ProductsSection() {
+
+  const [itensNoCarrinho, setItensNoCarrinho] = useState<any[]>([]);
+
   const products = [
     {
       id: 1,
@@ -47,6 +53,10 @@ export default function ProductsSection() {
     },
   ]
 
+  const adicionarAoCarrinho = (product: any) => {
+    setItensNoCarrinho((prevItens) => [...prevItens, product]);
+  };
+
   return (
     <section className="secao-produtos">
       <div className="secao-container">
@@ -60,11 +70,22 @@ export default function ProductsSection() {
               type={product.type}
               price={product.price}
               image={product.image}
+              onAddToCart={() => adicionarAoCarrinho(product)}
             />
           ))}
         </div>
+
+        {itensNoCarrinho.length > 0 && (
+          <div>
+            <p className="produtos-selecionados">
+              "{itensNoCarrinho.length}" item no seu carrinho</p>
+            <div className="botao-finalizar-compra">
+              <button>Comprar</button>
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   )
 }
-
