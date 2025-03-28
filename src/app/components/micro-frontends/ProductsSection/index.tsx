@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import "./styles.css"
 import ProductCard from "./ProductCard"
 import { useState } from "react";
-import Carrinho from '../../../../../public/images/icones/cesta.png'
 
 export default function ProductsSection() {
 
