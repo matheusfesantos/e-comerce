@@ -19,10 +19,8 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-}
-
-.logo-imagem {
-  height: auto;
+  color: var(--cor-verde-700);
+  font-family: cursive;
 }
 
 .menu-navegacao {

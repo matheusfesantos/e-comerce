@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="rodape-coluna">
             <div className="rodape-logo">
               <Image
-                src="/images/logo/essence-logo.png"
+                src="/images/logo/maju-logo.png"
                 alt="Essence"
                 width={100}
                 height={33}

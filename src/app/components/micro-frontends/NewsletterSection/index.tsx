@@ -7,7 +7,7 @@ export default function NewsletterSection() {
         <div className="newsletter-conteudo">
           <h2 className="titulo-secao">Junte-se à Nossa Comunidade</h2>
           <p className="newsletter-descricao">
-            Assine nossa newsletter para ofertas exclusivas, novidades e dicas sobre fragrâncias.
+            Compre conosco e tenha acesso exclusivo, novidades e dicas sobre fragrâncias.
           </p>
           <div className="newsletter-form">
             <input type="email" placeholder="Seu endereço de e-mail" className="newsletter-input" />
