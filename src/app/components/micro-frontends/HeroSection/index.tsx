@@ -4,11 +4,7 @@ import "./styles.css"
 
 
 export default function HeroSection() {
-
-  const phoneNumber = "5519986126226";
-  const message = encodeURIComponent("Ola, gostaria de comprar seu produtos");
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
-
+  
   return (
     <section className="secao-principal">
       <div className="secao-container">

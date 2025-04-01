@@ -10,6 +10,10 @@ interface ProductCardProps {
 
 export default function ProductCard({ name, type, price, image, onAddToCart }: ProductCardProps) {
 
+  const phoneNumber = "5519986126226";
+  const message = encodeURIComponent("Ola, gostaria de comprar seu produtos");
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
   return (
     <div className="produto-card">
 
@@ -21,6 +25,7 @@ export default function ProductCard({ name, type, price, image, onAddToCart }: P
         <h3 className="produto-titulo">{name}</h3>
         <p className="produto-subtitulo">{type}</p>
         <p className="produto-preco">{price}</p>
+
         <button className="botao-produto" onClick={onAddToCart}>Adicionar ao Carrinho</button>
       </div>
 
