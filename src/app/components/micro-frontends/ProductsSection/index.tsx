@@ -96,11 +96,34 @@ export default function ProductsSection() {
                 </p>
                 <div>
                   <p>Produtos: </p>
-                  <ul> {itensNoCarrinho.map((products) => 
-                  <p key={products.id}>{products.name} - {products.price} 
-                  - {products.type}</p>)}
+                  <ul>
+                    {Object.values(
+                      itensNoCarrinho.reduce((acc: Record<number, any>, product) => {
+                        if (!acc[product.id]) {
+                          acc[product.id] = { ...product, quantity: 0 };
+                        }
+                        acc[product.id].quantity += 1;
+                        return acc;
+                      }, {})
+                    ).map((product) => (
+                      <p key={product.id}>
+                        {product.name} - {product.price} - {product.type} ({product.quantity}) - Subtotal:{" "}
+                        {(parseFloat(product.price.replace("R$", "").replace(",", ".")) * product.quantity).toLocaleString("pt-BR", {
+                          style: "currency",
+                          currency: "BRL",
+                        })}
+                      </p>
+                    ))}
                   </ul>
                 </div>
+
+                {/* Mostrar o total */}
+                <p>
+                  <strong>Total:</strong>{" "}
+                  {itensNoCarrinho
+                    .reduce((acc, product) => acc + parseFloat(product.price.replace("R$", "").replace(",", ".")), 0)
+                    .toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+                </p>
 
                 <div className="botao-finalizar-compra">
                   <button onClick={compraPrompt}>Comprar</button>
