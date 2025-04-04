@@ -12,6 +12,14 @@ interface Produto {
   image: string;
 }
 
+interface Produto {
+  id: number;
+  name: string;
+  type: string;
+  price: string;
+  image: string;
+}
+
 export default function ProductsSection() {
 
   const [itensNoCarrinho, setItensNoCarrinho] = useState<Produto[]>([]);
@@ -71,10 +79,6 @@ export default function ProductsSection() {
     setItensNoCarrinho((prevItens) => [...prevItens, product]);
   };  
 
-  const compraPrompt = () => {
-    alert(itensNoCarrinho)
-  }
-
   return (
     <section className="secao-produtos">
       <div className="secao-container">
@@ -131,7 +135,11 @@ export default function ProductsSection() {
                     .reduce((acc, product) => acc + parseFloat(product.price.replace("R$", "").replace(",", ".")), 0)
                     .toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
                 </p>
-
+          <div>
+            <p className="produtos-selecionados">
+              {itensNoCarrinho.length} item no seu carrinho</p>
+            <div className="botao-finalizar-compra">
+              <button>Comprar</button>
                 <div className="botao-finalizar-compra">
                   <a 
                   href="https://wa.me/5519986126226?text=Ola%2C%20gostaria%20de%20comprar%20seu%20produtos"
