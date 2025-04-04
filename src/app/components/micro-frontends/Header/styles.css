@@ -64,6 +64,13 @@
   height: 20px;
 }
 
+.titulo {
+  font-family: serif;
+  font-weight: bold;
+  color: var(--cor-verde-800);
+  margin-bottom: 16px;
+}
+
 @media (min-width: 768px) {
   .menu-navegacao {
     display: flex;
