@@ -4,9 +4,17 @@ import "./styles.css"
 import ProductCard from "./ProductCard"
 import { useState } from "react";
 
+interface Produto {
+  id: number;
+  name: string;
+  type: string;
+  price: string;
+  image: string;
+}
+
 export default function ProductsSection() {
 
-  const [itensNoCarrinho, setItensNoCarrinho] = useState<any[]>([]);
+  const [itensNoCarrinho, setItensNoCarrinho] = useState<Produto[]>([]);
 
   const products = [
     {
@@ -44,17 +52,10 @@ export default function ProductsSection() {
       price: "R$ 29,99",
       image: "/images/produtos/cuide-se-bem.jpeg",
     },
-    {
-      id: 6,
-      name: "Desodorante",
-      type: "Desodorante",
-      price: "R$ 29,99",
-      image: "/images/produtos/desodorante.jpeg",
-    },
   ]
 
-  const adicionarAoCarrinho = (product: any) => {
-    setItensNoCarrinho((prevItens) => [...prevItens, product]);
+  const adicionarAoCarrinho = (produto: Produto) =>{
+    setItensNoCarrinho((prevItens) => [...prevItens, produto]);
   };
 
   return (
@@ -78,7 +79,7 @@ export default function ProductsSection() {
         {itensNoCarrinho.length > 0 && (
           <div>
             <p className="produtos-selecionados">
-              "{itensNoCarrinho.length}" item no seu carrinho</p>
+              {itensNoCarrinho.length} item no seu carrinho</p>
             <div className="botao-finalizar-compra">
               <button>Comprar</button>
             </div>
