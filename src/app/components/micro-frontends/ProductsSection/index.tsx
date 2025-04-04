@@ -107,8 +107,9 @@ export default function ProductsSection() {
                       }, {})
                     ).map((product) => (
                       <p key={product.id}>
-                        {product.name} - {product.price} - {product.type} ({product.quantity}) - Subtotal:{" "}
-                        {(parseFloat(product.price.replace("R$", "").replace(",", ".")) * product.quantity).toLocaleString("pt-BR", {
+                        {product.name} - {product.price} - {product.type} ({product.quantity}) -
+                        {(parseFloat(product.price.replace("R$", "").replace(",", ".")) * 
+                        product.quantity).toLocaleString("pt-BR", {
                           style: "currency",
                           currency: "BRL",
                         })}
@@ -126,7 +127,11 @@ export default function ProductsSection() {
                 </p>
 
                 <div className="botao-finalizar-compra">
-                  <button onClick={compraPrompt}>Comprar</button>
+                  <a 
+                  href="https://wa.me/5519986126226?text=Ola%2C%20gostaria%20de%20comprar%20seu%20produtos"
+                  target="_blank" rel="noopener noreferrer">
+                  <button>Comprar</button>
+                  </a>
                 </div>
               </div>
 

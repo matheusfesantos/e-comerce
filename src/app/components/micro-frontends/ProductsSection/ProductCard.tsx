@@ -1,4 +1,4 @@
-// filepath: c:\Users\Lenovo\Desktop\e-comerce\src\app\components\micro-frontends\ProductsSection\ProductCard.tsx
+
 import Image from "next/image";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

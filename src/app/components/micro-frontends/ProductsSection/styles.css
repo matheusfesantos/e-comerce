@@ -101,7 +101,7 @@
   padding: 10px;
   border-radius: 20, 20, 20, 20;
   text-align: center;
-  background-color: var(--cor-verde-400);
+  background-color: var(--cor-verde-700);
   transition: ease-in;
 
   button{
@@ -127,6 +127,7 @@
 
 
 .botao-finalizar-compra:hover{
+  transition: var(--transicao);
   background-color: var(--cor-verde-300);
 }
 

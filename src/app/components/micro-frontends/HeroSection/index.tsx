@@ -19,6 +19,8 @@ export default function HeroSection() {
               <button className="botao-primario">
                 <a
                   href="https://wa.me/5519986126226?text=Ola%2C%20gostaria%20de%20comprar%20seu%20produtos"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="botao-primario"
                 >
                   Comprar Agora
