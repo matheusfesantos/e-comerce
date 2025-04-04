@@ -2,7 +2,6 @@
 
 Este é um projeto de e-commerce para a loja **Maju Cosméticos**, desenvolvido com **React** e **Next.js**. O objetivo é oferecer uma interface simples e funcional para exibir produtos, adicionar itens ao carrinho e calcular o total da compra.
 
----
 <p align="center">
   <img src="https://github.com/matheusfesantos/e-comerce/blob/main/public/images/logo/maju-logo.png" alt="Logo Maju Cosméticos" width="200"/>
 </p>
