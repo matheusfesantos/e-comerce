@@ -1,3 +1,4 @@
+import Link from "next/link"
 import "./styles.css"
 
 export default function Header() {

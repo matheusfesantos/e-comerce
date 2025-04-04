@@ -4,9 +4,17 @@ import "./styles.css"
 import ProductCard from "./ProductCard"
 import { useEffect, useState } from "react";
 
+interface Produto {
+  id: number;
+  name: string;
+  type: string;
+  price: string;
+  image: string;
+}
+
 export default function ProductsSection() {
 
-  const [itensNoCarrinho, setItensNoCarrinho] = useState<any[]>([]);
+  const [itensNoCarrinho, setItensNoCarrinho] = useState<Produto[]>([]);
 
   const [show, setShow] = useState(false);
 
@@ -59,9 +67,9 @@ export default function ProductsSection() {
     },
   ]
 
-  const adicionarAoCarrinho = (product: any) => {
+  const adicionarAoCarrinho = (product: Produto) => {
     setItensNoCarrinho((prevItens) => [...prevItens, product]);
-  };
+  };  
 
   const compraPrompt = () => {
     alert(itensNoCarrinho)
@@ -85,8 +93,6 @@ export default function ProductsSection() {
             />
           ))}
         </div>
-
-        {itensNoCarrinho.length > 0 && (
           <div className={show ? 'fade-in' : ''}>
 
             <div>
@@ -134,7 +140,6 @@ export default function ProductsSection() {
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         )}
