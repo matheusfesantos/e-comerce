@@ -74,12 +74,16 @@
   position: relative;
   height: 320px;
   width: 320px;
-  border-radius: 50%;
+  border-radius: 200px;
   background-color: var(--cor-verde-100);
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.imagem-destaque {
+  border-radius: 200px;
+  object-fit: contain;
   img{
     border-radius: 50%;
   }

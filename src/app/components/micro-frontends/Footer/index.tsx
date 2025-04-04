@@ -16,7 +16,7 @@ export default function Footer() {
                 className="rodape-logo-imagem"
               />
             </div>
-            <p className="rodape-texto">Seu destino confiável para fragrâncias e perfumes premium.</p>
+            <p className="rodape-texto">Seu destino confiável para perfumes e sabonetes premium.</p>
           </div>
 
           <div className="rodape-coluna">

@@ -1,7 +1,10 @@
 import Image from "next/image"
+import Logo from "../../../../../public/images/logo/essence-logo.png"
 import "./styles.css"
 
+
 export default function HeroSection() {
+  
   return (
     <section className="secao-principal">
       <div className="secao-container">
@@ -13,13 +16,21 @@ export default function HeroSection() {
               individualidade.
             </p>
             <div className="botoes-principal">
-              <button className="botao-primario">Comprar Agora</button>
+              <button className="botao-primario">
+                <a
+                  href="https://wa.me/5519986126226?text=Ola%2C%20gostaria%20de%20comprar%20seu%20produtos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="botao-primario"
+                >
+                  Comprar Agora
+                </a></button>
             </div>
           </div>
           <div className="secao-principal-imagem">
             <div className="imagem-destaque-container">
               <Image
-                src="/images/logo/maju-logo.png"
+                src={Logo}
                 alt="Maju Cosméticos"
                 width={300}
                 height={300}

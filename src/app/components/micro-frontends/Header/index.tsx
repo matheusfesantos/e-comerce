@@ -5,10 +5,8 @@ export default function Header() {
   return (
     <header className="cabecalho">
       <div className="cabecalho-container">
-        <div className="cabecalho-conteudo">
-          <Link href="/" className="logo-container">
-            <h3>Maju Cosméticos</h3>
-          </Link>
+         <div className="titulo">
+          <h1>Maju Cosméticos</h1>
         </div>
       </div>
     </header>
