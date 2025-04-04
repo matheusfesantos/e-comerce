@@ -3,6 +3,7 @@ import HeroSection from "./components/micro-frontends/HeroSection"
 import ProductsSection from "./components/micro-frontends/ProductsSection"
 import NewsletterSection from "./components/micro-frontends/NewsletterSection"
 import Footer from "./components/micro-frontends/Footer"
+import { ToastContainer } from "react-toastify"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <ToastContainer/>
         <ProductsSection />
         <NewsletterSection />
       </main>
