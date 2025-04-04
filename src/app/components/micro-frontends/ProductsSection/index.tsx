@@ -4,9 +4,17 @@ import "./styles.css"
 import ProductCard from "./ProductCard"
 import { useState } from "react";
 
+interface Produto {
+  id: number;
+  name: string;
+  type: string;
+  price: string;
+  image: string;
+}
+
 export default function ProductsSection() {
 
-  const [itensNoCarrinho, setItensNoCarrinho] = useState<any[]>([]);
+  const [itensNoCarrinho, setItensNoCarrinho] = useState<Produto[]>([]);
 
   const products = [
     {
@@ -53,9 +61,9 @@ export default function ProductsSection() {
     },
   ]
 
-  const adicionarAoCarrinho = (product: any) => {
+  const adicionarAoCarrinho = (product: Produto) => {
     setItensNoCarrinho((prevItens) => [...prevItens, product]);
-  };
+  };  
 
   return (
     <section className="secao-produtos">
@@ -78,7 +86,7 @@ export default function ProductsSection() {
         {itensNoCarrinho.length > 0 && (
           <div>
             <p className="produtos-selecionados">
-              "{itensNoCarrinho.length}" item no seu carrinho</p>
+              {itensNoCarrinho.length} item no seu carrinho</p>
             <div className="botao-finalizar-compra">
               <button>Comprar</button>
             </div>
